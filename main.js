@@ -35,7 +35,9 @@
       var table = document.getElementById('table-data')
       table.innerHTML = ''
 
-      // Create Table
+      // Create Table and total up interest payments.
+
+      var totalInterest = 0
 
       function buildRow (date, rate, remainder) {
         if (Number(remainder) <= 0) return
@@ -50,21 +52,18 @@
         template.innerHTML = `<tr><td>${d}</td><td>${i.toLocaleString('en-us', {style: 'currency', currency: 'USD'})}</td><td>${p.toLocaleString('en-us', {style: 'currency', currency: 'USD'})}</td><td>${r.toLocaleString('en-us', {style: 'currency', currency: 'USD'})}</td></tr>`
         var clone = document.importNode(template.content, true)
 
+        totalInterest += i
+
         table.append(clone)
 
         buildRow(date, i, r)
       }
       buildRow(startDate.value, interestRate, loanAmount)
 
-
       // Fill in total interest paid
-      totalUpInterest()
+      document.getElementById('total-interest').value = totalInterest
 
     }, false)
-
-    function totalUpInterest () {
-      var totalInterest = document.getElementById('total-interest')
-    }
 
   }, false)
 }());
