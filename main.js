@@ -61,7 +61,7 @@
       buildRow(startDate.value, interestRate, loanAmount)
 
       // Fill in total interest paid
-      document.getElementById('total-interest').value = totalInterest
+      document.getElementById('total-interest').value = Math.round(totalInterest * 100) / 100
 
     }, false)
 
