@@ -12,16 +12,17 @@ body {
 }
 
 h1{
+  font-size: 1.75em;
   margin-top: 0;
 }
 
 form {
-  margin: 2em;
+  margin: 1em;
 }
 
 input {
   display: block;
-  margin: .25em 0 1.5em 0;
+  margin: .25em 0 1em 0;
   font-size: 1.2em;
   padding: .5em .15em;
 }
@@ -35,7 +36,7 @@ h3 {
 }
 
 div#payment-schedule {
-  margin: 2em;
+  margin: 1em;
 }
 
 div#payment-schedule h1 {
@@ -54,7 +55,7 @@ td {
   padding: 1em;
 }
 
-@media all and (max-width: 945px) {
+@media all and (max-width: 650px) {
 
   body {
     padding: 0;

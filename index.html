@@ -9,7 +9,7 @@
   <body>
 
     <form>
-      <h1>Inputs</h1>
+      <h1>Loan Terms</h1>
       <div>
         <h3>Loan Amount</h3>
         <input id="loan-amount" type="number" value="100000" min="0" max="10000000000" step=".01" placeholder="Loan Amount">
@@ -23,14 +23,6 @@
         <input id="months" type="number" value="360" min="0" max="5000" step="1" placeholder="Months">
       </div>
       <div>
-        <h3>Monthly Payment</h3>
-        <input id="monthly-payment" readonly type="number" value="" min="" max="" step=".01" placeholder="Monthly Payment">
-      </div>
-      <div>
-        <h3>Total Interest</h3>
-        <input id="total-interest" readonly type="number" value="" min="" max="" step="" placeholder="Total Interest">
-      </div>
-      <div>
         <h3>Start Date</h3>
         <input id="start-date" type="date" value="">
       </div>
@@ -38,13 +30,21 @@
         <h3>End Date</h3>
         <input id="end-date" readonly type="date" value="">
       </div>
+      <div>
+        <h3>Monthly Payment</h3>
+        <input id="monthly-payment" readonly type="number" value="" min="" max="" step=".01" placeholder="Monthly Payment">
+      </div>
+      <div>
+        <h3>Total Interest</h3>
+        <input id="total-interest" readonly type="number" value="" min="" max="" step="" placeholder="Total Interest">
+      </div>
       <div id="rundiv">
         <input id="run" type="submit" value="Build Schedule »">
       </div>
     </form>
 
     <div id="payment-schedule">
-      <h1>Schedule</h1>
+      <h1>Payment Schedule</h1>
       <table>
         <thead>
           <th>Date</th>
