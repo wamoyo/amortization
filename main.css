@@ -2,8 +2,13 @@
 /* Styles */
 
 body {
-  display: flex;
   font-family: monospace;
+}
+
+@media all and (min-width: 945px) {
+  body {
+    display: flex;
+  }
 }
 
 h1{
@@ -33,6 +38,10 @@ div#payment-schedule {
   margin: 2em;
 }
 
+div#payment-schedule h1 {
+  text-align: center;
+}
+
 th {
   text-align: right;
   padding: 0 1em 1em 1em;
@@ -43,5 +52,27 @@ th {
 td {
   text-align: right;
   padding: 1em;
+}
+
+@media all and (max-width: 945px) {
+
+  body {
+    padding: 0;
+  }
+
+  div#payment-schedule {
+    margin: 0;
+  }
+
+  div#payment-schedule table th {
+    font-size: 3.5vw;
+    padding: 0 .25em 1em .25em;
+  }
+
+  div#payment-schedule table td {
+    font-size: 3.05vw;
+    padding: .25em;
+  }
+
 }
 
